@@ -1,0 +1,75 @@
+<br>
+<div class="row">
+  <div class="col s5">
+    <img src="{{blog.image_url}}" alt="{{blog.description}}">
+  </div>
+  <div class="col s7">
+    <div class="row">
+      <h3>{{blog.title}}</h3>
+    </div>
+    <div class="row">
+      <div class="content">
+        {{blog.content}} Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+        aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
+        anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s6 center">
+        <h5>{{blog.author}}</h5>
+        <span>{{blog.author_description}}</span>
+      </div>
+      <div class="col s6">
+        <div class="row">
+          <div class="col s12">
+            <h6>Created Time <br>
+              <small>{{blog.created_at}}</small>
+            </h6>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col s12">
+            <h6>Updated Time <br>
+              <small>{{blog.updated_at}}</small>
+            </h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col s6">
+        <div class="col s6">
+        </div>
+        <div class="col s6">
+          <a class="waves-effect waves-light btn" [routerLink]="['/blog-detail/' + blog.id + '/' + blog.author]">Author</a>
+        </div>
+      </div>
+      <div class="col s3">
+        <a class="waves-effect waves-light btn" (click)="PrevBlog()">Previous</a>
+      </div>
+      <div class="col s3">
+        <a class="waves-effect waves-light btn" (click)="NextBlog()">Next</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col s6"></div>
+  <div class="col s6">
+    <div class="col s6">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+<div class="col s12">
+  <form action="" #fUpdateAuthor="ngForm" (ngSubmit)="UpdateAuthor(fUpdateAuthor.value)">
+    <input type="text" name="author" [(ngModel)]="blog.author" (keyup.event)="UpdateAuthor(fUpdateAuthor.value)">
+    <input type="text" name="author_description" [(ngModel)]="blog.author_description" (keyup.event)="UpdateAuthor(fUpdateAuthor.value)">
+    <a class="waves-effect waves-light btn" (click)="UpdateAuthor(fUpdateAuthor.value)"><i class="material-icons right">edit</i>Edit</a>
+  </form>
+</div>
+
+
+<!--<form id="modal-new-edit" class="modal modal-fixed-footer" #fNewUpdate="ngForm"-->
+<!--(ngSubmit)="UpdateTask(fNewUpdate.value)">-->
+<!--<div class="modal-content">-->
+<!--<input type="text" name="name" [(ngModel)]="new.name" value="{{data.name}}"-->
+<!--(keypress)="HandleEventKeyPress($event.keyCode)" required/>-->
+<!--<input type="text" name="content" [(ngModel)]="new.content" value="{{data.content}}"-->
+<!--(keypress)="HandleEventKeyPress($event.keyCode)" required/>-->
+<!--</div>-->
+<!--<div class="modal-footer">-->
+<!--<a class="modal-action modal-close waves-effect waves-green btn-flat" type="submit"-->
+<!--(click)="UpdateTask(fNewUpdate.value)">Update</a>-->
+<!--<a href="#" class="modal-action modal-close waves-effect waves-green btn-flat">Cancel</a>-->
+<!--</div>-->
+<!--</form>-->
