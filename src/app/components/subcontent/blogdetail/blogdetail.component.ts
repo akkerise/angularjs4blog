@@ -9,6 +9,7 @@ import {BlogsService} from "../../../services/blogs.service"
   styleUrls: ['./blogdetail.component.scss']
 })
 export class BlogdetailComponent implements OnInit {
+
   private _id: number
   public _subscription: Subscription
   public blog: any = null
@@ -42,7 +43,6 @@ export class BlogdetailComponent implements OnInit {
   NextBlog = () => {
     this._id++
     this.GetBlogByIdRedirect(this._id)
-    console.log(this._id)
   }
 
   PrevBlog = () => {
@@ -54,12 +54,8 @@ export class BlogdetailComponent implements OnInit {
     if (id <= this.countData && id >= 0) {
       this.blogsService.getBlogById(id).subscribe((res: any) => {
         this.blog = res
-        this.RefreshPage()
-      }, (err: any) => {
-        console.log(err)
+        console.log(this.blog)
       })
-    } else {
-      this.RefreshPage()
     }
   }
 
