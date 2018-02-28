@@ -24,7 +24,6 @@ export class BlogsService {
   updateBlogByIdFake = (id: number, data: any): Observable<any> => {
     data.image_url = this.imgLoremPixelURL + this.typeIMG[Math.floor(Math.random() * this.typeIMG.length)]
     data.updated_at = this.ConvertStringToFormatTime()
-    console.log(data)
     return this.http.put(this.apiBlogs + id, data).map((res: Response) => res.json())
   }
 
